@@ -1,7 +1,6 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/auth";
-import { initializeAuth, signInWithPopup } from "firebase/compat/auth";
 
 const config = {
   apiKey: "AIzaSyDzjLC1D2WRkX_Gnj04Qm-oBzgELsbSobw",

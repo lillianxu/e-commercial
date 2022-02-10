@@ -4,15 +4,10 @@ import "./App.css";
 import HomePage from "./pages/homepage/homepage.component";
 import ShopPage from "./pages/shop/shop.component";
 import Header from "./components/header/header.component";
-import { auth } from "./firebase/firebase.utiles";
+import { auth } from "./firebase/firebase.utils";
 import SignInAndSignUp from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
-const HatsPage = () => (
-  <div>
-    <h1>Hat Page</h1>
-  </div>
-);
 
-class App extends React.component {
+class App extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -33,11 +28,11 @@ class App extends React.component {
   render() {
     return (
       <div>
-        <Header />
+        <Header currentUser={this.state.currentUser} />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
-          <Route path="/signin" component={SignInAndSignUp} />
+          <Route path="/sign_in" component={SignInAndSignUp} />
         </Switch>
       </div>
     );
